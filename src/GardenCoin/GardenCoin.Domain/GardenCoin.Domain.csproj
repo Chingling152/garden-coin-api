@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Interfaces\Services\" />
     <Folder Include="Models\" />
-    <Folder Include="Entities\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GardenCoin.Auth.Domain\GardenCoin.Auth.Domain.csproj" />
   </ItemGroup>
 
 </Project>
