@@ -13,5 +13,7 @@ namespace GardenCoin.Domain.Entities
 
         [Column("ULTIMA_ATUALIZACAO")]
         public DateTime UltimaAtualizacao { get; set; }
+
+        public List<CarteiraEntity> Carteiras { get; set; }
     }
 }

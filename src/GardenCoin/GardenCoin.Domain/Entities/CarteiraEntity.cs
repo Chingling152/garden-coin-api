@@ -20,10 +20,15 @@ namespace GardenCoin.Domain.Entities
 
         [Column("ID_CORRETORA")]
         public Guid IdCorretora { get; set; }
-        public CorretoraEntity Corretora { get; set; }
 
         [Column("ID_USUARIO")]
         public Guid IdUsuario { get; set; }
+
+        [Column("ID_BALANCO")]
+        public Guid IdBalanco { get; set; }
+
+        public CorretoraEntity Corretora { get; set; }
         public UsuarioEntity Usuario { get; set; }
+        public List<BalancoEntity> Balancos { get; set; }
     }
 }

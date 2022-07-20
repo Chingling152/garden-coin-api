@@ -13,7 +13,7 @@ namespace GardenCoin.Domain.Entities
 
         [Column("ID_CARTEIRA")]
         public Guid IdCarteira { get; set; }
-        public CarteiraEntity Cateira { get; set; }
+        public CarteiraEntity Carteira { get; set; }
 
         public List<AtivoEntity> Ativos { get; set; }
         public List<CdbEntity> Cdbs { get; set; }
