@@ -1,4 +1,4 @@
-﻿using GardenCoin.Auth.Domain.Entities;
+﻿using GardenCoin.Domain.Entities.Auth;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GardenCoin.Domain.Entities

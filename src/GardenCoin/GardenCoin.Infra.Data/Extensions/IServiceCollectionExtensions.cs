@@ -7,12 +7,12 @@ namespace GardenCoin.Infra.Data.Extensions
 {
     public static class IServiceCollectionExtensions
     {
-        public static IServiceCollection AddCoreInfra(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfra(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<GardenCoinCoreContext>(s =>
+            services.AddDbContext<GardenCoinContext>(s =>
                 s.UseSqlServer(
                     connectionString: configuration.GetConnectionString("Core"),
-                    sqlServerOptionsAction: b => b.MigrationsAssembly("GardenCoin.Infra.Migrations").MigrationsHistoryTable("TB_CORE_MIGRATIONS")
+                    sqlServerOptionsAction: b => b.MigrationsAssembly("GardenCoin.Infra.Migrations").MigrationsHistoryTable("TB_MIGRATIONS")
                 )
             );
             return services;

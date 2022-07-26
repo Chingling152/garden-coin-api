@@ -1,16 +1,30 @@
 ﻿using GardenCoin.Domain.Entities;
+using GardenCoin.Domain.Entities.Auth;
 using Microsoft.EntityFrameworkCore;
 
 namespace GardenCoin.Infra.Data.Contexts
 {
-    public class GardenCoinCoreContext : DbContext
+    public class GardenCoinContext : DbContext
     {
-        public GardenCoinCoreContext(DbContextOptions<GardenCoinCoreContext> options) : base(options)
+        public GardenCoinContext(DbContextOptions<GardenCoinContext> options) : base(options)
         {
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<LoginEntity>(entity => {
+                entity
+                    .HasOne(l => l.Usuario)
+                    .WithMany(u => u.Logins)
+                    .HasForeignKey(x => x.IdUsuario)
+                    .IsRequired();
+
+                entity.HasKey(x => new {
+                    x.IdUsuario,
+                    x.Email
+                });
+            });
+
             modelBuilder
                 .Entity<CdbEntity>(
                     cdb =>
@@ -31,7 +45,6 @@ namespace GardenCoin.Infra.Data.Contexts
                             .WithOne(x => x.TipoAtivo);
                     }
                 );
-
 
             modelBuilder
                 .Entity<AtivoEntity>(
@@ -103,5 +116,7 @@ namespace GardenCoin.Infra.Data.Contexts
         public DbSet<AtivoEntity> Ativos { get; set; }
         public DbSet<CdbEntity> Cdbs { get; set; }
 
+        public DbSet<LoginEntity> Login { get; set; }
+        public DbSet<UsuarioEntity> Usuarios { get; set; }
     }
 }

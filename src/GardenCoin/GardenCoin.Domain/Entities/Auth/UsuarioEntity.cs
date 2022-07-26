@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GardenCoin.Auth.Domain.Entities
+namespace GardenCoin.Domain.Entities.Auth
 {
     [Table("TB_USUARIO")]
     public class UsuarioEntity

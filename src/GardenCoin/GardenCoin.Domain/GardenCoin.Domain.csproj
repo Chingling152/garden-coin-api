@@ -12,8 +12,4 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\GardenCoin.Auth.Domain\GardenCoin.Auth.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

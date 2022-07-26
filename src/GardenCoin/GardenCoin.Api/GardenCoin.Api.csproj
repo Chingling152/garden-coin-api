@@ -23,8 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GardenCoin.Auth.Infra.Data\GardenCoin.Auth.Infra.Data.csproj" />
-    <ProjectReference Include="..\GardenCoin.Auth.Infra.Migrations\GardenCoin.Auth.Infra.Migrations.csproj" />
     <ProjectReference Include="..\GardenCoin.Infra.Data\GardenCoin.Infra.Data.csproj" />
     <ProjectReference Include="..\GardenCoin.Infra.Migrations\GardenCoin.Infra.Migrations.csproj" />
   </ItemGroup>
