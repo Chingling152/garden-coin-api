@@ -5,7 +5,7 @@ namespace GardenCoin.Infra.Data.Contexts
 {
     public class GardenCoinCoreContext : DbContext
     {
-        public GardenCoinCoreContext(DbContextOptions options) : base(options)
+        public GardenCoinCoreContext(DbContextOptions<GardenCoinCoreContext> options) : base(options)
         {
         }
 

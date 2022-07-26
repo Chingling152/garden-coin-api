@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GardenCoin.Domain\GardenCoin.Core.Domain.csproj" />
+    <ProjectReference Include="..\GardenCoin.Domain\GardenCoin.Domain.csproj" />
   </ItemGroup>
 
 </Project>

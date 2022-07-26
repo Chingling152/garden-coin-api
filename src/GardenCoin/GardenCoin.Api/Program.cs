@@ -1,10 +1,11 @@
+using GardenCoin.Infra.Data.Extensions;
 using GardenCoin.Auth.Infra.Data.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var config = builder.Configuration;
 builder.Services.AddAuthInfra(config);
-
+builder.Services.AddCoreInfra(config);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

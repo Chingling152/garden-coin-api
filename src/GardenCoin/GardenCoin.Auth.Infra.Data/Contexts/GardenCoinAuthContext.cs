@@ -5,7 +5,7 @@ namespace GardenCoin.Auth.Infra.Data.Contexts
 {
     public class GardenCoinAuthContext : DbContext
     {
-        public GardenCoinAuthContext(DbContextOptions options) : base(options)
+        public GardenCoinAuthContext(DbContextOptions<GardenCoinAuthContext> options) : base(options)
         {
         }
 
